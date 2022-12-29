@@ -61,8 +61,8 @@ public class ConverterOnFrame extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource()==buttonClose) {System.exit(0);}
-        else {fieldAnswer.setText(convertValve());}
+        if (e.getSource()==buttonConvert) {fieldAnswer.setText(convertValve());}
+        else if (e.getSource()==buttonClose) {System.exit(0);};
     }
 
     String convertValve(){
