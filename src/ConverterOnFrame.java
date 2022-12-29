@@ -58,4 +58,10 @@ public class ConverterOnFrame extends JFrame implements ActionListener {
         add(buttonClose);
         add(buttonConvert);
     }
+
+    String convertValve(){
+        double value = Double.valueOf(fieldVal.getText());
+        double answer =  (lendthInMm[comboBoxFrom.getSelectedIndex()] * value)/lendthInMm[comboBoxTo.getSelectedIndex()];
+        return String.format("%.2f",answer);
+    }
 }
